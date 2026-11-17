@@ -1,0 +1,37 @@
+﻿# Python environment and cache
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Private configuration
+.env
+.streamlit/secrets.toml
+
+# Large local data and trained models
+dataset/
+models/
+
+# Backup dashboard files
+app_real_backup.py
+app_synthetic_backup.py
+
+# Ignore other output files
+outputs/*
+!outputs/real/
+
+# Include only the files required by the dashboard
+outputs/real/*
+!outputs/real/receiver_model_evaluation.csv
+!outputs/real/receiver_shap_importance.csv
+!outputs/real/receiver_confidence_results.csv
+!outputs/real/receiver_ewma_test.csv
+!outputs/real/receiver_severity_mitigation.csv
+!outputs/real/receiver_detection_comparison.csv
+!outputs/real/receiver_shap_global.png
+!outputs/real/receiver_shap_beeswarm.png
+!outputs/real/receiver_lime_benign.png
+!outputs/real/receiver_lime_attacker.png
+private_originals/
+# Private original datasets and results
+private_originals/
